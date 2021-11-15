@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_152536) do
+ActiveRecord::Schema.define(version: 2021_11_15_161034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "plushes", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.bigint "owner_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["owner_id"], name: "index_plushes_on_owner_id"
+  end
+
+  create_table "rentals", force: :cascade do |t|
+    t.date "date"
+    t.bigint "tenant_id", null: false
+    t.bigint "plush_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plush_id"], name: "index_rentals_on_plush_id"
+    t.index ["tenant_id"], name: "index_rentals_on_tenant_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +47,7 @@ ActiveRecord::Schema.define(version: 2021_11_15_152536) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "plushes", "users", column: "owner_id"
+  add_foreign_key "rentals", "plushes"
+  add_foreign_key "rentals", "users", column: "tenant_id"
 end
