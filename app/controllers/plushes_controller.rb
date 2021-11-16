@@ -14,6 +14,7 @@ end
 
   def create
   @plush = Plush.new(plush_params)
+  @plush.owner_id = User.last.id
     if @plush.save
       redirect_to plush_path(@plush)
     else
@@ -24,6 +25,6 @@ end
   private
 
   def plush_params
-    params.require(:plush).permit(:name, :description, :price, :owner_id)
+    params.require(:plush).permit(:name, :description, :price, :photo)
   end
 end
