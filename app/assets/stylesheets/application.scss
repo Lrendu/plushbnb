@@ -13,8 +13,17 @@
 @import "pages/index";
 
 
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-
+body {position: relative;}
+footer {position: absolute; bottom: 0; left: 0; right: 0}
 
 .text-muted {
     color: grey !important;
@@ -71,19 +80,8 @@ div{
   background-color: grey;
 }
 
-*{
-margin:0;
-padding:0;
-}
 
 
-footer{
-position:absolute;
-bottom:0;
-width:100%;
-padding-top:50px;
-height:50px;
-}
 
 .padding_top{
   padding-top: 50px;
