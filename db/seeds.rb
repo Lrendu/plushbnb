@@ -38,6 +38,7 @@ betty = User.create!(
   email: 'bet@gmail.com',
   password: 'password'
 )
+
 puts "#{User.count} users were created"
 
 brie = Plush.create!(
