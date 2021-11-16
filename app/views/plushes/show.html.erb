@@ -1,0 +1,12 @@
+<h1><%= @plush.name %> details</h1>
+<h2><%= @plush.description %></h2>
+<h3><%= @plush.price %> €</h3>
+
+<div>
+  <% @plush.rentals.each do |rental| %>
+    <p><%= rental.date %> - <%= rental.tenant.email %></p>
+
+  <% end %>
+</div>
+
+<p><%= link_to 'Back', plushes_path %></p>
