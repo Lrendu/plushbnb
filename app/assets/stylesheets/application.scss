@@ -11,3 +11,53 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background-color: rgb(50, 50, 50);
+}
+
+.navbar h1{
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white
+}
+
+.login {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 20px;
+  margin:40px;
+}
+
+a {
+    color: white;
+}
+
+footer {
+  background-color: grey;
+  color: white;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+.bg-light {
+ background-color: rgb(50, 50, 50)!important;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+ margin: auto;
+    justify-content: space-between
+}
