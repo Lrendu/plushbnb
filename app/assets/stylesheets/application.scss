@@ -15,13 +15,9 @@
 
 
 
-footer {
-  background-color: grey;
-  color: white;
-}
 
 .text-muted {
-    color: white !important;
+    color: grey !important;
 }
 
 .bg-light {
@@ -45,8 +41,52 @@ footer {
 }
 .container_registration h2{
 text-align: center;
+color: grey;
+}
+label{
+text-align: center;
+color: grey;
 }
 
 div{
-  padding: 20px;
+  padding: 10px;
+}
+
+.btn{
+  width: 200px;
+  border: rgb(17, 111, 103) 1px solid;
+  border-radius: 5px;
+}
+
+.form-actions{
+  text-align: center;
+}
+
+.form-check {
+  text-align: right;
+}
+
+
+
+.text-center{
+  background-color: grey;
+}
+
+*{
+margin:0;
+padding:0;
+}
+
+body, html{height:100%;}
+body{
+text-align:center;
+color: white;
+}
+
+footer{
+position:absolute;
+bottom:0;
+width:100%;
+padding-top:50px;
+height:50px;
 }
