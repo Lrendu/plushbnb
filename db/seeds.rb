@@ -6,36 +6,37 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Plush.destroy_all
+
 Rental.destroy_all
+Plush.destroy_all
+User.destroy_all
 
 alex = User.create!(
-  name: 'Alex',
-  description: 'Les peluches, c\'est ma vie',
+  # name: 'Alex',
+  # description: 'Les peluches, c\'est ma vie',
   email: 'alex@gmail.com',
-  password: 'azertyu123'
+  password: 'password'
 )
 
 joseph = User.create!(
-  name: 'Joseph',
-  description: 'La peluche, y a que ça de vrai!',
+  # name: 'Joseph',
+  # description: 'La peluche, y a que ça de vrai!',
   email: 'jojo@gmail.com',
-  password: 'ghcjgfh3569'
+  password: 'password'
 )
 
 eleonore = User.create!(
-  name: 'Eleonore',
-  description: 'Les bisounours me font rêver!',
+  # name: 'Eleonore',
+  # description: 'Les bisounours me font rêver!',
   email: 'leo@gmail.com',
-  password: 'lugjhg87654'
+  password: 'password'
 )
 
 betty = User.create!(
-  name: 'Betty',
-  description: 'Mieux qu\'une peluche : deux peluches!',
+  # name: 'Betty',
+  # description: 'Mieux qu\'une peluche : deux peluches!',
   email: 'bet@gmail.com',
-  password: 'gjhhg3567'
+  password: 'password'
 )
 puts "#{User.count} users were created"
 
@@ -55,13 +56,13 @@ ketchup = Plush.create!(
 puts "#{Plush.count} plushes were created"
 
 Rental.create!(
-  date: DateTime.strptime("15/12/2021"),
+  date: DateTime.new(2021, 12, 5),
   tenant: eleonore,
   plush: brie
 )
 
 Rental.create!(
-  date: DateTime.strptime("05/01/2022"),
+  date: DateTime.new(2022, 1, 2),
   tenant: betty,
   plush: ketchup
 )
