@@ -6,6 +6,7 @@ end
 
 def show
   @plush = Plush.find(params[:id])
+  @rental = Rental.new
 end
 
 def new
