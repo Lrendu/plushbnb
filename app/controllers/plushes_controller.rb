@@ -12,17 +12,18 @@ def new
   @plush = Plush.new
 end
 
-def create
+  def create
   @plush = Plush.new(plush_params)
-  if @plush.save
-    redirect_to plush_path(@plush)
+    if @plush.save
+      redirect_to plush_path(@plush)
+    else
+      render :new
+    end
   end
-end
 
-private
+  private
 
-def plush_params
-  params.require(:plush).permit(:name, :description, :price, :owner_id)
-end
-
+  def plush_params
+    params.require(:plush).permit(:name, :description, :price, :owner_id)
+  end
 end
