@@ -1,0 +1,17 @@
+<h1><%= @plush.name %> details</h1>
+<h2><%= @plush.description %></h2>
+<h3><%= @plush.price %> €</h3>
+
+<div>
+  <% @plush.rentals.each do |rental| %>
+    <p><%= rental.date %></p>
+    <p><%= rental.user.email %></p>
+    <p><%= #link_to 'Remove rental', rental_path(rental), method: :delete %></p>
+  <% end %>
+</div>
+
+<p><%= #link_to 'Add a rental', new_plush_rental_path(@plush) %></p>
+
+<p><%= #link_to 'Delete plush', plushes_path, method: :delete %></p>
+
+<p><%= link_to 'Back', plushes_path %></p>
