@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(50, 50, 50);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,28 +11,25 @@
   width: 40px;
 }
 
+
+
 h1{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.4s;
     font-family:Arial, Helvetica, sans-serif;
+    font-size: 36px;
 }
 
 .navbar {
-  background-color: rgb(50, 50, 50);
+  background-color: white;
 }
 
 .navbar h1{
-  color: white;
+  color: rgb(50, 50, 50);
 }
 .navbar-light .navbar-nav .nav-link {
-  color: white
+  color: rgb(50, 50, 50)
 }
 
 .login {
   text-decoration: none;
   list-style-type: none;
-  padding: 20px;
-  margin:40px;
 }
