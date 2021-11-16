@@ -35,6 +35,10 @@
                 </p>
             <div class="btn">
             <%= link_to 'More info', plush_path(plush) %>
+            <%= link_to "Remove", plush_path(plush),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: 'ml-3 text-danger' %>
           </div>
         </div>
       </div>

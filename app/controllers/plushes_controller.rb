@@ -6,6 +6,7 @@ end
 
 def show
   @plush = Plush.find(params[:id])
+  @rental = Rental.new
 end
 
 def new
@@ -21,6 +22,13 @@ end
       render :new
     end
   end
+
+  def destroy
+    @plush = Plush.find(params[:id])
+    @plush.destroy
+    redirect_to plush_path(@plushes)
+  end
+
 
   private
 
