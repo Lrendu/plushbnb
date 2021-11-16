@@ -12,43 +12,12 @@
 @import "components/index";
 @import "pages/index";
 
-h1{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.4s;
-    font-family:Arial, Helvetica, sans-serif;
-}
 
-.navbar {
-  background-color: rgb(50, 50, 50);
-}
 
-.navbar h1{
-  color: white;
-}
-.navbar-light .navbar-nav .nav-link {
-  color: white
-}
 
-.login {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 20px;
-  margin:40px;
-}
-
-a {
-    color: white;
-}
-
-footer {
-  background-color: grey;
-  color: white;
-}
 
 .text-muted {
-    color: white !important;
+    color: grey !important;
 }
 
 .bg-light {
@@ -60,4 +29,68 @@ footer {
     flex-wrap: wrap;
  margin: auto;
     justify-content: space-between
+}
+
+.container_registration{
+  width: 600px;
+  padding: 20px;
+
+  margin: auto;
+  box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
+  border-radius: 20px;
+}
+.container_registration h2{
+text-align: center;
+color: grey;
+}
+label{
+text-align: center;
+color: grey;
+}
+
+div{
+  padding: 10px;
+}
+
+.btn{
+  width: 200px;
+  border: rgb(17, 111, 103) 1px solid;
+  border-radius: 5px;
+}
+
+.form-actions{
+  text-align: center;
+}
+
+.form-check {
+  text-align: right;
+}
+
+
+
+.text-center{
+  background-color: grey;
+}
+
+*{
+margin:0;
+padding:0;
+}
+
+body, html{height:100%;}
+body{
+text-align:center;
+color: white;
+}
+
+footer{
+position:absolute;
+bottom:0;
+width:100%;
+padding-top:50px;
+height:50px;
+}
+
+.padding_top{
+  padding-top: 100px;
 }
