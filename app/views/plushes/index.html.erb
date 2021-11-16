@@ -13,7 +13,7 @@
     <% @plushes.each do |plush| %>
       <div class="col-4">
         <div class="flat-card">
-          <div class="flat-card-image" style="background-image: url('<%= plush.picture_url %>')"></div>
+
           <div class="flat-card-content">
             <div class="flat-card-title">
               <h4><%= plush.name %></h4>
@@ -21,20 +21,12 @@
             <p><%= plush.description %></p>
             <div class="flex">
               <div class="flex">
-                <i class="material-icons mr-2">euro_symbol</i><span><%= plush.price %></span>
+                <i class="fas fa-euro-sign"></i><span><%= plush.price %></span>
               </div>
 
             </div>
           </div>
-         <!-- <div class="flat-card-actions">
-            <%= link_to 'More info', plush_path(plush) %>
-            <%= link_to 'Edit', edit_plush_path(plush), class: 'ml-3 text-warning' %>
-            <%= link_to "Remove", ft_path(flat),
-                method: :delete,
-                data: { confirm: "Are you sure?" },
-                class: 'ml-3 text-danger'
-            %>
-          </div> -->
+
         </div>
       </div>
     <% end %>
