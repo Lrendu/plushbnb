@@ -1,7 +1,7 @@
 class PlushesController < ApplicationController
 
 def index
-  @plushes = Plushes.all
+  @plushes = Plush.all
 end
 
 def show
