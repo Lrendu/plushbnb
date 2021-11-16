@@ -12,35 +12,8 @@
 @import "components/index";
 @import "pages/index";
 
-h1{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.4s;
-    font-family:Arial, Helvetica, sans-serif;
-}
 
-.navbar {
-  background-color: rgb(50, 50, 50);
-}
 
-.navbar h1{
-  color: white;
-}
-.navbar-light .navbar-nav .nav-link {
-  color: white
-}
-
-.login {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 20px;
-  margin:40px;
-}
-
-a {
-    color: white;
-}
 
 footer {
   background-color: grey;
@@ -60,4 +33,20 @@ footer {
     flex-wrap: wrap;
  margin: auto;
     justify-content: space-between
+}
+
+.container_registration{
+  width: 600px;
+  padding: 20px;
+
+  margin: auto;
+  box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
+  border-radius: 20px;
+}
+.container_registration h2{
+text-align: center;
+}
+
+div{
+  padding: 20px;
 }
