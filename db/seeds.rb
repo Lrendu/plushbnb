@@ -22,21 +22,37 @@ joseph = User.create!(
   password: 'ghcjgfh3569'
 )
 
+eleonore = User.create!(
+  name: 'Eleonore',
+  description: 'Les bisounours me font rêver!'
+  email:    'leo@gmail.com',
+  password: 'lugjhg87654'
+)
+
+joseph = User.create!(
+  name: 'Joseph',
+  description: 'La peluche, y a que ça de vrai!'
+  email:    'jojo@gmail.com',
+  password: 'ghcjgfh3569'
+)
+
 Plush.create!(
   name: 'Brie',
   description: 'La peluche Brie vous accompagne partout pour vous rappeler que le fromage c\'est la vie!',
-  price: 15,25,
-  user:
+  price: 15.25,
+  owner: alex
 )
 
-Restaurant.create!(
-  name: 'Bomp',
-  user: jojo
+Plush.create!(
+  name: 'Ketchup',
+  description: 'La peluche Ketchup vous permet d\'assaisonner vos moments moins up',
+  price: 12.32,
+  owner: joseph
 )
 
-Restaurant.create!(
-  name: 'Boston',
-  user: alex
+Rental.create!(
+  date:
+
 )
 
 puts "#{User.count} users were created"
