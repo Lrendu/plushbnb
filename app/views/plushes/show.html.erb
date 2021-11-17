@@ -11,7 +11,7 @@
 <h4>Propriétaire : <%= @plush.owner.name %></h4>
 
 <div>
-  <h3>La peluche n'est plus disponible aux dates suivantes</h3>
+  <h3>La peluche n'est hélas plus disponible aux dates suivantes</h3>
   <% @plush.rentals.each do |rental| %>
     <p><%= rental.date %> - <%= rental.tenant.name %></p>
 
