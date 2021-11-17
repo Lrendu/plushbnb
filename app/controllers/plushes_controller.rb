@@ -26,7 +26,7 @@ end
   def destroy
     @plush = Plush.find(params[:id])
     @plush.destroy
-    redirect_to plush_path(@plushes)
+    redirect_to plushes_path
   end
 
 
