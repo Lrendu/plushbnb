@@ -14,9 +14,7 @@
     </div>
   </div>
 
-
-        <p>Here's all <%= Plush.count %> of our plushes.</p>
-
+  <p>Here's all <%= Plush.count %> of our plushes.</p>
 
   <div class="row">
     <% @plushes.each do |plush| %>
@@ -25,7 +23,7 @@
               <% if plush.photo.attached? %>
                 <%= cl_image_tag plush.photo.key, class:"card-img-top"  %>
               <% else %>
-            <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
+                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
               <% end %>
             <div class="card-body">
               <h4 class="card-title"><%= plush.name %></h4>
@@ -43,7 +41,6 @@
                   data: { confirm: "Are you sure?" },
                   class: "fas fa-trash" %>
             </div>
-
           </div>
         </div>
       </div>

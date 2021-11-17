@@ -20,8 +20,8 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://i.pinimg.com/originals/ca/07/3b/ca073b90d87671f2ea6733bc65aed57f.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "My profile", users_user_profile_path, class: "dropdown-item" %>
+            <%= link_to "My plushes", users_user_plushes_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
