@@ -1,5 +1,6 @@
+<nav>
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to "/plushes", class: "navbar-brand" do %>
     <img src="https://cdn-icons-png.flaticon.com/512/620/620744.png" alt="">
   <% end %>
 
@@ -12,10 +13,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "Home", "/plushes", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://i.pinimg.com/originals/ca/07/3b/ca073b90d87671f2ea6733bc65aed57f.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -33,3 +31,4 @@
     </ul>
   </div>
 </div>
+</nav>

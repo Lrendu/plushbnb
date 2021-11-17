@@ -1,2 +1,127 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.container {
+  padding: 0;
+}
+
+
+.text-muted {
+  color: grey !important;
+}
+
+.bg-light {
+ background-color: rgb(50, 50, 50)!important;
+}
+
+.fa-trash:before {
+    content: "\f1f8";
+    color: gray;
+}
+
+.row {
+display: flex;
+flex-wrap: wrap;
+margin: auto;
+justify-content: space-between
+}
+
+.container_registration{
+width: 600px;
+padding: 20px;
+margin: auto;
+box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
+border-radius: 20px;
+}
+
+.container_registration h2{
+text-align: center;
+color: grey;
+}
+
+label{
+text-align: center;
+color: grey;
+}
+
+
+.bouton-aligne{
+	text-align:center;
+  margin-top: auto;
+  position: absolute; bottom: 10px; right: 10px;
+  display: inline;
+}
+
+.bouton-aligne2{
+	text-align:center;
+  margin-top: auto;
+  position: absolute; top: 10px; right: 10px;
+  display: inline;
+}
+
+
+.form-actions{
+  text-align: center;
+}
+
+.form-check {
+  text-align: right;
+}
+
+
+.text-center{
+  background-color: grey;
+}
+
+.padding_top{
+  padding-top: 50px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+}
+
+.card-img-top{
+  object-fit: contain;
+  height: 300px;
+  padding-top: 20px;
+}
+
+.card-body{
+  height: 220px;
+    display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin: 10px;
+  width: 350px;
+  border: none;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
