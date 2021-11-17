@@ -6,7 +6,7 @@
         <p><%= owner_plush.name %></p>
         <p><%= owner_plush.description %></p>
         <% if owner_plush.photo.attached? %>
-          <p><%= owner_plush.photo.key %></p>
+          <%= cl_image_tag owner_plush.photo.key %>
         <% else %>
           <p>No photo</p>
         <% end %>
