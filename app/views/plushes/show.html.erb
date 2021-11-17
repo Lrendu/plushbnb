@@ -23,14 +23,24 @@
 <div class="container">
   <div class="form-wrapper">
     <h2>Book a plush</h2>
-    <%= simple_form_for [@plush, @rental] do |f| %>
-      <%= f.input :date, label: "Sélectionnez votre date:",
-                         as: :string,
-                         required: false,
-                         input_html: { id: "date", class: "d-none"} %>
-      <%= f.hidden_field :tenant_id, value: current_user.id %>
-      <%= f.hidden_field :plush_id, value: @plush.id %>
-      <%= f.button :submit, "Book", class: "btn btn-primary" %>
+    <% if current_user.nil? %>
+      <%= simple_form_for [@plush, @rental], url: new_user_session_path do |f| %>
+        <%= f.input :date, label: "Sélectionnez votre date:",
+                          as: :string,
+                          required: false,
+                          input_html: { id: "date", class: "d-none"} %>
+        <%= f.button :submit, "Log in for book this plush", class: "btn btn-primary" %>
+      <% end %>
+    <% else %>
+      <%= simple_form_for [@plush, @rental] do |f| %>
+        <%= f.input :date, label: "Sélectionnez votre date:",
+                          as: :string,
+                          required: false,
+                          input_html: { id: "date", class: "d-none"} %>
+        <%= f.hidden_field :tenant_id, value: current_user.id %>
+        <%= f.hidden_field :plush_id, value: @plush.id %>
+        <%= f.button :submit, "Book", class: "btn btn-primary" %>
+      <% end %>
     <% end %>
   </div>
 </div>
