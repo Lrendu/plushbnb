@@ -2,6 +2,7 @@ class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
     @rental.save
+    redirect_to root_path(@plush)
   end
 
   private
