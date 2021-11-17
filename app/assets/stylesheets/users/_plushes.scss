@@ -2,5 +2,23 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  // grid-auto-rows: minmax(100px, auto);
+}
+
+.plush-card {
+  // grid-column: 1;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
 }

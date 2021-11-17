@@ -19,7 +19,7 @@ end
   def create
   @plush = Plush.new(plush_params)
   authorize @plush
-  @plush.owner_id = User.last.id
+  @plush.owner_id = current_user.id
     if @plush.save
       redirect_to plush_path(@plush)
     else
