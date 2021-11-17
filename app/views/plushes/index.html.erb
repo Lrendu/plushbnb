@@ -18,7 +18,7 @@
 
   <div class="row">
     <% @plushes.each do |plush| %>
-      <div class="col-4">
+      <div class="col-12 colsm-6 col-md-4">
         <div class="card" >
               <% if plush.photo.attached? %>
                 <%= cl_image_tag plush.photo.key, class:"card-img-top"  %>
