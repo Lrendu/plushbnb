@@ -1,5 +1,5 @@
 class PlushesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @plushes = Plush.all
@@ -7,8 +7,8 @@ class PlushesController < ApplicationController
 
 def show
   @plush = Plush.find(params[:id])
-  authorize @plush
   @rental = Rental.new
+  authorize @plush
 end
 
 def new
@@ -19,7 +19,7 @@ end
   def create
   @plush = Plush.new(plush_params)
   authorize @plush
-  @plush.owner_id = User.last.id
+  @plush.owner_id = current_user
     if @plush.save
       redirect_to plush_path(@plush)
     else
@@ -29,11 +29,10 @@ end
 
   def destroy
     @plush = Plush.find(params[:id])
-    authorize @plush
     @plush.destroy
     redirect_to plushes_path
+    authorize @plush
   end
-
 
   private
 
