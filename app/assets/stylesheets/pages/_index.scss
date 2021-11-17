@@ -11,8 +11,9 @@ body {
   position: relative;
 }
 
-
-footer {position: absolute; bottom: 0; left: 0; right: 0}
+.container {
+  padding: 0;
+}
 
 .text-muted {
   color: grey !important;
@@ -121,8 +122,4 @@ color: grey;
   width: 350px;
   border: none;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.footer_top{
-  padding: 100px;
 }
