@@ -7,6 +7,13 @@ end
 def show
   @plush = Plush.find(params[:id])
   @rental = Rental.new
+  @rentals = @plush.rentals
+  @rentals_dates = @rentals.map do |rental|
+    {
+      from: rental.date,
+      to:   rental.date
+    }
+  end
 end
 
 def new

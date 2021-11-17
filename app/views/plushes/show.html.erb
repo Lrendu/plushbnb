@@ -17,16 +17,34 @@
 
 <div>
   <h2>Choisir les dates de location de <%= @plush.name %>:</h2>
-  <%= simple_form_for(@rental) do |f| %>
-  <%= f.input :date %>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+<div class="container">
+  <div class="form-wrapper">
+    <h2>Book a plush</h2>
+    <%= simple_form_for [@plush, @rental] do |f| %>
+      <%= f.input :date, label: "Sélectionnez votre date:",
+                         as: :string,
+                         required: false,
+                         input_html: { id: "date", class: "d-none"} %>
+      <%= f.button :submit, "Book", class: "btn btn-primary" %>
+    <% end %>
   </div>
+</div>
+
+
+  <%# <%= simple_form_for(@rental) do |f| %>
+  <%# <%= f.input :date %>
+
+  <%# <div class="form-actions">
+    <%= f.button :submit %>
+  <%# </div>
 <% end %>
 
+<%# </div> %>
+
+
+<div id="rental_dates" data-rentals="<%= @rentals_dates.to_json %>">
 </div>
 
-</div>
+<div>
 <p><%= link_to 'Back', plushes_path %></p>
 </div>
