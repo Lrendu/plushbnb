@@ -1,20 +1,22 @@
 <h1>My Plushes</h1>
 
-<div>
-  <% current_user.plushes.each do |owner_plush| %>
-    <p><%= owner_plush.name %></p>
-    <p><%= owner_plush.description %></p>
-    <% if owner_plush.photo.attached? %>
-      <p><%= owner_plush.photo.key %></p>
-    <% else %>
-      <p>No photo</p>
+<div class="wrapper">
+  <div class="plush-card">
+    <% current_user.plushes.each do |owner_plush| %>
+      <p><%= owner_plush.name %></p>
+      <p><%= owner_plush.description %></p>
+      <% if owner_plush.photo.attached? %>
+        <p><%= owner_plush.photo.key %></p>
+      <% else %>
+        <p>No photo</p>
+      <% end %>
+      <p><%= owner_plush.price %> € / jour</p>
+      <p>Bookings for <%= owner_plush.name %> :</p>
+      <% owner_plush.rentals.each do |owner_plush_rental| %>
+        <p><%= owner_plush_rental.date %></p>
+      <% end %>
     <% end %>
-    <p><%= owner_plush.price %> € / jour</p>
-    <p>Bookings for <%= owner_plush.name %> :</p>
-    <% owner_plush.rentals.each do |owner_plush_rental| %>
-      <p><%= owner_plush_rental.date %></p>
-    <% end %>
-  <% end %>
+  </div>
 </div>
 
 <%= link_to 'Add a plush', new_plush_path %>
