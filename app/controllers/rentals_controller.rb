@@ -3,6 +3,7 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     authorize @rental
     @rental.save
+    redirect_to root_path(@plush)
   end
 
   private
