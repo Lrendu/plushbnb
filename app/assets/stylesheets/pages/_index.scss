@@ -35,24 +35,6 @@ margin: auto;
 justify-content: space-between
 }
 
-.container_registration{
-width: 600px;
-padding: 20px;
-margin: auto;
-box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
-border-radius: 20px;
-}
-
-.container_registration h2{
-text-align: center;
-color: grey;
-}
-
-label{
-text-align: center;
-color: grey;
-}
-
 
 .bouton-aligne{
 	text-align:center;
@@ -89,7 +71,7 @@ color: grey;
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 250px;
 }
 
 .banner h1 {

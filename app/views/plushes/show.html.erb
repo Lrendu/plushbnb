@@ -17,6 +17,7 @@
 
 <div>
   <h2>Choisir les dates de location de <%= @plush.name %>:</h2>
+  <h2>Mis en location par <%= @plush.owner.email %>:</h2>
   <%= simple_form_for(@rental) do |f| %>
   <%= f.input :date %>
 
