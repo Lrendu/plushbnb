@@ -1,6 +1,7 @@
 class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
+    authorize @rental
     @rental.save
   end
 
