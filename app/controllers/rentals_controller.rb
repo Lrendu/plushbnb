@@ -1,9 +1,11 @@
 class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
+    @plush = Plush.find(params[:plush_id])
+    @tenant = current_user
     authorize @rental
     @rental.save
-    redirect_to root_path(@plush)
+    redirect_to plush_path(@plush), notice: "Peluche bien reservée"
   end
 
   private
