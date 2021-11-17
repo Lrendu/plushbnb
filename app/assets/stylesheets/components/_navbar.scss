@@ -13,19 +13,19 @@
 
 .nav-link {
   text-align: center;
-  border: rgb(17, 124, 123) 1px solid;
+  border: #00AFB9 1px solid;
   border-radius: 10px;
 }
 
 .nav-link:hover {
   text-align: center;
-  background-color: rgb(17, 124, 123);
+  background-color: #00AFB9;
   border-radius: 10px;
 }
 
 .navbar-light .navbar-nav .active > .nav-link,{
   text-decoration: none;
-  color:  rgb(17, 124, 123);
+  color:  #00AFB9;
 }
 
 .navbar-light .navbar-nav .active > .nav-link:hover,{
@@ -42,7 +42,7 @@ h1{
 }
 
 .navbar {
-  background-color: white;
+  background-color: #353535;
 }
 
 .navbar h1{

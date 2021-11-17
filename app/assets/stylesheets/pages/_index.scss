@@ -21,12 +21,12 @@ body {
 }
 
 .bg-light {
- background-color: rgb(50, 50, 50)!important;
+ background-color: #353535!important;
 }
 
 .fa-trash:before {
     content: "\f1f8";
-    color: gray;
+    color: #353535;
 }
 
 .row {
@@ -67,10 +67,6 @@ justify-content: space-between
 }
 
 
-.text-center{
-  background-color: grey;
-}
-
 .padding_top{
   padding-top: 50px;
 }
@@ -108,7 +104,7 @@ justify-content: space-between
 
 .card {
   border: none;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .text h1{
