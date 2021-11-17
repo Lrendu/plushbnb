@@ -26,7 +26,7 @@ body {position: relative;}
 footer {position: absolute; bottom: 0; left: 0; right: 0}
 
 .text-muted {
-    color: grey !important;
+  color: grey !important;
 }
 
 .bg-light {
@@ -34,36 +34,37 @@ footer {position: absolute; bottom: 0; left: 0; right: 0}
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
- margin: auto;
-    justify-content: space-between
+display: flex;
+flex-wrap: wrap;
+margin: auto;
+justify-content: space-between
 }
 
 .container_registration{
-  width: 600px;
-  padding: 20px;
-
-  margin: auto;
-  box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
-  border-radius: 20px;
+width: 600px;
+padding: 20px;
+margin: auto;
+box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
+border-radius: 20px;
 }
+
 .container_registration h2{
 text-align: center;
 color: grey;
 }
+
 label{
 text-align: center;
 color: grey;
 }
 
-div{
-  padding: 10px;
-}
+// div{
+//   padding-bottom: 50px;
+// }
 
 .btn{
   width: 200px;
-  border: rgb(17, 111, 103) 1px solid;
+  border: rgb(17, 62, 111) 1px solid;
   border-radius: 5px;
 }
 
@@ -80,9 +81,43 @@ div{
   background-color: grey;
 }
 
-
-
-
 .padding_top{
   padding-top: 50px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-img-top{
+  object-fit: contain;
+  height: 300px;
+}
+
+.card-body{
+  height: 220px;
+}
+
+.card {
+  width: 350px;
+}
+.footer_top{
+  padding: 200px;
 }
