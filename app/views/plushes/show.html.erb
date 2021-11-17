@@ -10,6 +10,7 @@
 <h3><%= @plush.price %> €</h3>
 
 <div>
+  <h3>La peluche n'est plus disponible aux dates suivantes</h3>
   <% @plush.rentals.each do |rental| %>
     <p><%= rental.date %> - <%= rental.tenant.email %></p>
 
@@ -26,17 +27,16 @@
                          as: :string,
                          required: false,
                          input_html: { id: "date", class: "d-none"} %>
+      <%= f.hidden_field :tenant_id, value: current_user.id %>
+      <%= f.hidden_field :plush_id, value: @plush.id %>
       <%= f.button :submit, "Book", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-
+<% console %>
   <%# <%= simple_form_for(@rental) do |f| %>
   <%# <%= f.input :date %>
-
-
-
 
   <%# <div class="form-actions">
     <%= f.button :submit %>
