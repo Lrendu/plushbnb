@@ -1,4 +1,4 @@
-class PlushPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -21,17 +21,11 @@ class PlushPolicy < ApplicationPolicy
     true
   end
 
-  def destroy?
+  def user_profile?
     true
   end
 
-  #def update?
-   # true
-  #end
-
- # def edit?
-  #  true
-  #end
-
-
+  def user_plushes?
+    true
+  end
 end
