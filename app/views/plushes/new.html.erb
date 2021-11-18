@@ -3,7 +3,8 @@
 </div>
 
 <div class="container_registration">
-<h1>New Plush</h1>
+<h2>New Plush</h2>
+
 <% if policy(Plush).create? %>
   <%= simple_form_for(@plush) do |f| %>
   <%= f.input :name %>

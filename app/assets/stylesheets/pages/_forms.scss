@@ -40,3 +40,11 @@ color: white;
   border-radius: 10px;
   color: white;
 }
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    /* font-family: inherit; */
+    font-size: inherit;
+    line-height: inherit;
+    color: white;
+}

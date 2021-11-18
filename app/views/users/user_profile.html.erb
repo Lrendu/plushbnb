@@ -11,6 +11,11 @@
 
 
 <div class="container">
+
+  <div class="wrapper2">
+<%= link_to 'Add a plush', new_plush_path, class: "button" %>
+  </div>
+
 <div class="wrapper">
     <% current_user.plushes.each do |owner_plush| %>
       <div class="plush-card">
@@ -39,37 +44,4 @@
 </div>
 </div>
 
-  <div class="wrapper2">
-<%= link_to 'Add a plush', new_plush_path, class: "button" %>
-  </div>
-
-
-</div>
-
-<div class="container">
-  <div class="wrapper">
-      <% current_user.plushes.each do |owner_plush| %>
-        <div class="plush-card">
-          <% if owner_plush.photo.attached? %>
-            <%= cl_image_tag owner_plush.photo.key, class: "plush-card-img"%>
-          <% else %>
-            <p>No photo</p>
-          <% end %>
-          <div class="plush-card-text">
-            <p><%= owner_plush.name %></p>
-            <p><%= owner_plush.description %></p>
-            <p><%= owner_plush.price %> € / jour</p>
-          </div>
-          <p>Bookings for <%= owner_plush.name %> :</p>
-          <% owner_plush.rentals.each do |owner_plush_rental| %>
-            <p><%= owner_plush_rental.date %></p>
-          <% end %>
-          <div class="bouton"><h6>Supprimer cette peluche</h6>
-                <%= link_to "", plushes_path(@plush),
-                method: :delete,
-                data: { confirm: "Are you sure?" },
-                class: "fas fa-trash" %>
-          </div>
-      <% end %>
-  </div>
 </div>
