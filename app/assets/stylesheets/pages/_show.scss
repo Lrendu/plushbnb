@@ -1,0 +1,74 @@
+.background-show{
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.information{
+  margin:auto;
+}
+
+.card-img-top-show{
+  object-fit: cover;
+  width: 100%;
+  padding: 20px;
+
+}
+
+h2 {
+  font-family: 'Trirong', serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-wrapper p {
+  text-align: center;
+}
+
+.description h1{
+  padding-top: 5px;
+ text-align: center;
+ margin: 10px;
+ margin-bottom: 0px;
+}
+
+
+.details h4{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form-wrapper h3{
+  font-size: 20px;
+  background-color: #00AFB9;
+  border-radius: 10px;
+  padding:5px;
+  width: 100px;
+  margin-left:200px;
+  text-align: center;
+}
+
+.description p{
+padding-top: 5px;
+text-align: center;
+padding: 5px;
+font-weight: lighter;
+}
+
+label{
+  color:#353535;
+
+}
+
+.back a{
+    color: #00AFB9;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 15px
+}
