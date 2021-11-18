@@ -63,6 +63,6 @@ class PlushesController < ApplicationController
   private
 
   def plush_params
-    params.require(:plush).permit(:name, :description, :price, :photo, :owner)
+    params.require(:plush).permit(:name, :description, :price, :photo, :owner, :address)
   end
 end
