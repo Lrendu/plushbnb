@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
+
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(50, 50, 50);
+  background: #00AFB9;
 
 }
 
@@ -14,7 +17,7 @@
 
 .nav-link {
   text-align: center;
-  border: #00AFB9 1px solid;
+  border: white 1px solid;
   border-radius: 10px;
 
 }
@@ -24,14 +27,14 @@
 }
 
 a {
-    color: #00AFB9;
+    color: white;
     text-decoration: none;
     background-color: transparent;
     padding-bottom: 10px;
 }
 .far{
   text-align: center;
-  color: #00AFB9;
+  color: white;
   font-size: 30px;
   padding-top: 5px;
 }
@@ -43,13 +46,13 @@ a {
 
 .nav-link:hover {
   text-align: center;
-  background-color: #00AFB9;
+  background-color: #017892;
   border-radius: 10px;
 }
 
 .navbar-light .navbar-nav .active > .nav-link,{
   text-decoration: none;
-  color:  #00AFB9;
+  color:  white;
 }
 
 .navbar-light .navbar-nav  .active > .nav-link:hover,{
@@ -71,14 +74,14 @@ h1{
 }
 
 .navbar {
-  background-color: #353535;
+  background-color: #00AFB9;
 }
 
 .navbar h1{
-  color: rgb(50, 50, 50);
+  color: white;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgb(50, 50, 50)
+  color: white
 }
 
 .login {

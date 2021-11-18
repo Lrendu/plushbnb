@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
+
 .container_registration{
 width: 600px;
 padding: 20px;
 margin: auto;
 box-shadow: 1px 1px 7px 1px rgba(84, 84, 84, 0.1);
 border-radius: 20px;
+background-color: #00AFB9;
 }
 
 .container_registration h2{
 text-align: center;
-color: #353535;
+color: white;
 }
 
 label{
 text-align: center;
-color: #353535;
+color: white;
 }
 
 .form-actions{
@@ -22,4 +25,18 @@ color: #353535;
 
 .form-check {
   text-align: right;
+}
+
+.btn {
+  color: white;
+    text-align: center;
+  border: white 1px solid;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  text-align: center;
+  background-color: #017892;
+  border-radius: 10px;
+  color: white;
 }
