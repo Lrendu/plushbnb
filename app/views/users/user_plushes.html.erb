@@ -3,14 +3,16 @@
 <div class="wrapper">
     <% current_user.plushes.each do |owner_plush| %>
       <div class="plush-card">
-        <p><%= owner_plush.name %></p>
-        <p><%= owner_plush.description %></p>
         <% if owner_plush.photo.attached? %>
-          <%= cl_image_tag owner_plush.photo.key %>
+          <%= cl_image_tag owner_plush.photo.key, class: "plush-card-img"%>
         <% else %>
           <p>No photo</p>
         <% end %>
-        <p><%= owner_plush.price %> € / jour</p>
+        <div class="plush-card-text">
+          <p><%= owner_plush.name %></p>
+          <p><%= owner_plush.description %></p>
+          <p><%= owner_plush.price %> € / jour</p>
+        </div>
         <p>Bookings for <%= owner_plush.name %> :</p>
         <% owner_plush.rentals.each do |owner_plush_rental| %>
           <p><%= owner_plush_rental.date %></p>
