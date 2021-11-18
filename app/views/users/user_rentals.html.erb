@@ -1,0 +1,12 @@
+<h1>My rentals</h1>
+
+<div class="container">
+  <div class="wrapper">
+      <% current_user.plushes.each do |plush| %>
+        <% plush.rentals.each do |rental| %>
+          <p><%= rental.date %> - <%= rental.tenant.name %></p>
+        <% end %>
+      <% end %>
+
+  </div>
+</div>
