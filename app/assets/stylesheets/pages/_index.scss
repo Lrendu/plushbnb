@@ -112,7 +112,7 @@ body {
 }
 
 .card-body{
-  height: auto;
+  height: 170px;
   display: flex;
   flex-direction: column;
 }
@@ -157,13 +157,14 @@ text-align: right;
 .form-control1 {
   width: 400px;
 display: inline-block;
-  padding: 10px;
+  padding: 7px;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 2px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 10px;
 }
 
 .search{
