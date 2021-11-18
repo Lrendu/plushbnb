@@ -17,11 +17,13 @@
 <div class="wrapper">
     <% current_user.plushes.each do |owner_plush| %>
       <div class="card">
+      <%= link_to plush_path(owner_plush) do %>
         <% if owner_plush.photo.attached? %>
           <%= cl_image_tag owner_plush.photo.key, class: "card-img-top"%>
         <% else %>
           <p>No photo</p>
         <% end %>
+    <% end %>
         <div class="card-title">
           <p><%= owner_plush.name %></p>
         </div>
@@ -40,8 +42,8 @@
               class: "fas fa-trash" %>
         </div>
       </div>
-</div>
-</div>
     <% end %>
+
+</div>
 
 </div>

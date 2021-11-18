@@ -4,6 +4,20 @@
     <p>Never leave without your plush!</p>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
+<<<<<<< HEAD
+=======
+
+
+<div class="search">
+  <%= form_tag plushes_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control1",
+      placeholder: "Find a plush"
+    %>
+    <%= submit_tag "Search", class: "btn" %>
+  <% end %>
+>>>>>>> master
 </div>
 
 <div class="container">
@@ -42,6 +56,11 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 <div class="container">
   <div class="cards-grid">
     <% @plushes.each do |plush| %>
@@ -63,6 +82,10 @@
       <% end %>
     <% end %>
   </div>
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
 
 <div id="map"
