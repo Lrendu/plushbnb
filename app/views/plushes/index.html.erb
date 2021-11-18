@@ -7,14 +7,26 @@
 </div>
 
 <div class="container">
-  <%= form_tag plushes_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a plush"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+  <%= simple_form_for :query, method: :get,
+                                  defaults: { wrapper_html: { class: "mr-3" },
+                                              required: false },
+                                  html: { class: 'd-flex my-2' } do |f| %>
+        <%= f.input :query, label: false,
+                            input_html: { name: 'query',
+                                          placeholder: "Find a plush",
+                                          value: params.dig(:query) } %>
+        <%= f.input :color, label:         false,
+                                  collection:    Plush.distinct.pluck(:color),
+                                  include_blank: 'Color',
+                                  selected:      params[:color],
+                                  input_html:    { name: :color } %>
+        <%= f.input :size, label:         false,
+                               collection:    Plush.distinct.pluck(:size),
+                               include_blank: 'Size',
+                               selected:      params[:size],
+                               input_html:    { name: :size } %>
+        <%= f.submit "Chercher", class: "btn btn-primary mb-3" %>
+        <% end %>
 </div>
 
 
@@ -28,11 +40,6 @@
     <% end %>
   </div>
 </div>
-
-<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 <div class="container">
   <div class="cards-grid">
@@ -53,4 +60,10 @@
       <% end %>
     <% end %>
   </div>
+</div>
+
+<div id="map"
+  style="width: 100%; height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

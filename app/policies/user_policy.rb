@@ -29,7 +29,7 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
-  def delete_plush?
+  def user_rentals?
     true
   end
 end

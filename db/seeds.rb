@@ -49,7 +49,6 @@ brie = Plush.create!(
   name: 'Brie',
   description: 'La peluche Brie vous accompagne partout pour vous rappeler que le fromage c\'est la vie!',
   price: 15.25,
-
   owner: alex
   address: '18 résidences des peyrisses, Foix'
   color: "White",

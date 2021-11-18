@@ -9,11 +9,8 @@ class UsersController < ApplicationController
     authorize @user
   end
 
-  def delete_plush
+  def user_rentals
     @user = current_user
     authorize @user
-    @plush = Plush.find(params[@user.plush.id])
-    authorize @plush
-    @plush.destroy
   end
 end
