@@ -17,6 +17,12 @@
         <% owner_plush.rentals.each do |owner_plush_rental| %>
           <p><%= owner_plush_rental.date %></p>
         <% end %>
+        <div class="bouton"><h6>Supprimer cette peluche</h6>
+              <%= link_to "", users_user_plushes_path(@plush),
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              class: "fas fa-trash" %>
+        </div>
       </div>
     <% end %>
 </div>
