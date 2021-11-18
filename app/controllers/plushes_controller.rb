@@ -37,14 +37,18 @@ end
   def destroy
     @plush = Plush.find(params[:id])
     authorize @plush
-    @plush.destroy
-    redirect_to plushes_path
+    if @plush.rentals.any?
+      flash[:alert] = "Cette peluche est déjà louée, elle ne peut pas être supprimée"
+    else
+      @plush.destroy
+    end
+    redirect_to users_user_profile_path(@plush)
   end
 
 
   private
 
   def plush_params
-    params.require(:plush).permit(:name, :description, :price, :photo)
+    params.require(:plush).permit(:name, :description, :price, :photo, :owner)
   end
 end
