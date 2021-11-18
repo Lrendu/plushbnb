@@ -21,13 +21,22 @@
 
 @import "flatpickr/dist/flatpickr.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body {
   background-color: #F8F6EE;
   font-family: Heebo;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: Heebo;
+h1 {
+  font-family: 'Istok Web', sans-serif;
+}
 
+h2 {
+  font-family: 'Trirong', serif;
+}
+ h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Varela Round', sans-serif;
 }
