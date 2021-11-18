@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "forms";
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
 
 html {
   height: 100%;
@@ -21,25 +22,25 @@ body {
 }
 
 .bg-light {
- background-color: #353535!important;
+  background-color: #353535!important;
 }
 
 .fa-trash:before {
-    content: "\f1f8";
-    color: #353535;
+  content: "\f1f8";
+  color: #353535;
 }
 
 .row {
-display: flex;
-flex-wrap: wrap;
-margin: 0;
-padding: 0;
-justify-content: space-between
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between
 }
 
 .cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
 
   a {
@@ -54,14 +55,15 @@ justify-content: space-between
 }
 
 .bouton-aligne{
-	text-align:center;
+  text-align:center;
   margin-top: auto;
   position: absolute; bottom: 10px; right: 10px;
   display: inline;
 }
 
+
 .bouton-aligne2{
-	text-align:center;
+  text-align:center;
   margin-top: auto;
   position: absolute; top: 10px; right: 10px;
   display: inline;
@@ -90,7 +92,7 @@ justify-content: space-between
 .banner h1 {
   margin: 0;
   color: white;
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -103,24 +105,64 @@ justify-content: space-between
 .card-img-top{
   object-fit: contain;
   height: 300px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .card-body{
-  height: 220px;
-    display: flex;
+  height: auto;
+  display: flex;
   flex-direction: column;
+}
+
+.card-title{
+  background-color: #00AFB9;
+color: white;
+text-align: center;
+padding:5px;
+margin: 0;
 }
 
 .card {
   border: none;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .text h1{
   text-align: center;
+  font-family: Heebo;
   padding: 30px;
 }
 .text p{
 font-style: italic;
+font-family: Heebo;
+}
+.text {
+  padding-bottom:20px;
+}
+.card p{
+font-style: italic;
+font-family: Heebo;
+font-weight: 300;
+text-align: center;
+}
+
+.card h6{
+text-align: right;
+}
+
+.form-control {
+  width: 400px;
+  display: inline-block;
+  padding: 10px;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search{
+text-align: center;
 }
