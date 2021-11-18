@@ -14,9 +14,6 @@
         <li class="nav-item active">
           <%= link_to "Home", "/plushes", class: "nav-link" %>
         </li>
-        <li class="nav-item active">
-          <%= link_to "Sign-up", "/sign_up", class: "nav-link" %>
-          </li>
         <li class="nav-item dropdown">
           <img class="far fa-user" class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="" />
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -26,7 +23,10 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
       <% else %>
-        <li class="nav-item">
+        <li class="nav-item active">
+          <%= link_to "Sign-up", "/sign_up", class: "nav-link" %>
+          </li>
+        <li class="nav-item active">
           <%= link_to "Login", new_user_session_path, class: "nav-link"  %>
         </li>
       <% end %>
