@@ -2,9 +2,6 @@
 @import "home";
 @import "forms";
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 html {
   height: 100%;
@@ -155,16 +152,16 @@ text-align: right;
 }
 
 .form-control1 {
-  width: 400px;
+width: 400px;
 display: inline-block;
-  padding: 7px;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 2px;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    border-radius: 10px;
+padding: 7px;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: 2px;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
 }
 
 .search{
