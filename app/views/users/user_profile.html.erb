@@ -1,2 +1,41 @@
-<h1>My Profile</h1>
-<p><%= current_user.name %></p>
+
+
+<div class="profil">
+    <div class="main-body">
+              <div class="card-user">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" >
+                    <div class="mt-3">
+                      <h4><%= current_user.name %></h4>
+                      <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                      <h6 class="mb-0">Email:</h6> <p><%= current_user.email %></p>
+                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+<%= link_to 'Add a plush', new_plush_path, class: "button" %>
+<div class="container">
+<div class="wrapper">
+    <% current_user.plushes.each do |owner_plush| %>
+      <div class="plush-card">
+        <p><%= owner_plush.name %></p>
+        <p><%= owner_plush.description %></p>
+        <% if owner_plush.photo.attached? %>
+          <%= cl_image_tag owner_plush.photo.key %>
+        <% else %>
+          <p>No photo</p>
+        <% end %>
+        <p><%= owner_plush.price %> € / jour</p>
+        <p>Bookings for <%= owner_plush.name %> :</p>
+        <% owner_plush.rentals.each do |owner_plush_rental| %>
+          <p><%= owner_plush_rental.date %></p>
+        <% end %>
+      </div>
+    <% end %>
+</div>
+</div>
+
+
+        </div>
+    </div>
