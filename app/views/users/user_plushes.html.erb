@@ -1,5 +1,5 @@
+<div class="container">
 <h1>My Plushes</h1>
-
 <div class="wrapper">
     <% current_user.plushes.each do |owner_plush| %>
       <div class="plush-card">
@@ -20,5 +20,4 @@
       </div>
     <% end %>
 </div>
-
 <%= link_to 'Add a plush', new_plush_path %>

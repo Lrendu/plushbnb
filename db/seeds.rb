@@ -15,28 +15,32 @@ alex = User.create!(
   # name: 'Alex',
   # description: 'Les peluches, c\'est ma vie',
   email: 'alex@gmail.com',
-  password: 'password'
+  password: 'password',
+  name: 'Alex'
 )
 
 joseph = User.create!(
   # name: 'Joseph',
   # description: 'La peluche, y a que ça de vrai!',
   email: 'jojo@gmail.com',
-  password: 'password'
+  password: 'password',
+  name: "Joseph"
 )
 
 eleonore = User.create!(
   # name: 'Eleonore',
   # description: 'Les bisounours me font rêver!',
   email: 'leo@gmail.com',
-  password: 'password'
+  password: 'password',
+  name: "Eleonore"
 )
 
 betty = User.create!(
   # name: 'Betty',
   # description: 'Mieux qu\'une peluche : deux peluches!',
   email: 'bet@gmail.com',
-  password: 'password'
+  password: 'password',
+  name: "XxDarkSasukexX"
 )
 
 puts "#{User.count} users were created"

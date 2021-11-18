@@ -8,42 +8,29 @@
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h1>Meet our Plushes</h1>
-    </div>
+  <div class="text">
+    <h1>Meet our Plushes</h1>
+    <p>Here's all <%= Plush.count %> of our plushes.</p>
   </div>
+</div>
 
-  <p>Here's all <%= Plush.count %> of our plushes.</p>
-
-  <div class="row">
+<div class="container">
+  <div class="cards-grid">
     <% @plushes.each do |plush| %>
-      <div class="col-12 colsm-6 col-md-4">
-        <div class="card" >
-              <% if plush.photo.attached? %>
-                <%= cl_image_tag plush.photo.key, class:"card-img-top"  %>
-              <% else %>
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
-              <% end %>
-            <div class="card-body">
-              <h4 class="card-title"><%= plush.name %></h4>
-            <p class="card-text"><%= plush.description %></p>
-                <p>
-                <i class="fas fa-euro-sign"></i><span><%= plush.price %></span>
-                </p>
-            <div class="btn" class="card-footer">
-              <div class="bouton-aligne" >
-              <%= link_to 'More info', plush_path(plush) %>
-              </div>
-              <div class="bouton-aligne2">
-              <%= link_to "", plush_path(plush),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" },
-                  class: "fas fa-trash" %>
-            </div>
-          </div>
+    <%= link_to plush_path(plush) do %>
+      <div class="card" >
+        <% if plush.photo.attached? %>
+          <%= cl_image_tag plush.photo.key, class:"card-img-top"  %>
+        <% else %>
+          <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
+        <% end %>
+        <div class="card-body">
+          <h4 class="card-title"><%= plush.name %></h4>
+          <p class="card-text"><%= plush.description %></p>
+          <p><i class="fas fa-euro-sign"></i><span><%= plush.price %></span></p>
         </div>
       </div>
-  </div>
     <% end %>
+    <% end %>
+  </div>
 </div>
