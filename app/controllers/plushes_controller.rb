@@ -3,6 +3,14 @@ class PlushesController < ApplicationController
 
   def index
     @plushes = Plush.all
+
+    @markers = @plushes.geocoded.map do |plush|
+      {
+        lat: plush.latitude,
+        lng: plush.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { plush: plush })
+      }
+    end
   end
 
 def show

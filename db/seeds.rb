@@ -50,6 +50,7 @@ brie = Plush.create!(
   description: 'La peluche Brie vous accompagne partout pour vous rappeler que le fromage c\'est la vie!',
   price: 15.25,
   owner: alex
+  address: '18 résidences des peyrisses, Foix'
 )
 
 ketchup = Plush.create!(
@@ -57,6 +58,7 @@ ketchup = Plush.create!(
   description: 'La peluche Ketchup vous permet d\'assaisonner vos moments moins up',
   price: 12.32,
   owner: joseph
+  address: '16 villa gautelet, paris'
 )
 puts "#{Plush.count} plushes were created"
 
