@@ -3,11 +3,17 @@ class PlushesController < ApplicationController
 
   def index
 
+    @plushes = Plush.all
     if params[:query].present?
-      sql_query = "name @@ :query OR description @@ :query"
-      @plushes = Plush.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @plushes = Plush.all
+      # sql_query = "name @@ :query OR description @@ :query"
+      # @plushes = Plush.where(sql_query, query: "%#{params[:query]}%")
+      @plushes = Plush.search_by_name_and_description(params[:query])
+    end
+    if params[:color].present?
+      @plushes = @plushes.where(color: params[:color])
+    end
+    if params[:size].present?
+      @plushes = @plushes.where(size: params[:size])
     end
 
     @markers = @plushes.geocoded.map do |plush|

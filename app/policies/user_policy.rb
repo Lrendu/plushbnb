@@ -29,4 +29,7 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
+  def user_rentals?
+    true
+  end
 end
