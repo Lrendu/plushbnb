@@ -4,6 +4,8 @@
     <p>Never leave without your plush!</p>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
+
+
 <div class="search">
   <%= form_tag plushes_path, method: :get do %>
     <%= text_field_tag :query,
@@ -28,6 +30,7 @@
     <% end %>
   </div>
 </div>
+
 
 <div id="map"
      style="width: 100%; height: 600px;"
