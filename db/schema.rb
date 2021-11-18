@@ -43,10 +43,10 @@ ActiveRecord::Schema.define(version: 2021_11_18_110936) do
     t.bigint "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
     t.string "color"
     t.string "size"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["owner_id"], name: "index_plushes_on_owner_id"
   end
 
