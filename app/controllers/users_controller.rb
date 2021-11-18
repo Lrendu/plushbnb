@@ -5,4 +5,10 @@ class UsersController < ApplicationController
     @plushes = Plush.all
   end
 
+
+  def user_plushes
+    @user = current_user
+    authorize @user
+  end
+
 end

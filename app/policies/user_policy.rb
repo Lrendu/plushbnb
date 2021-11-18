@@ -28,4 +28,5 @@ class UserPolicy < ApplicationPolicy
   def user_plushes?
     true
   end
+
 end
