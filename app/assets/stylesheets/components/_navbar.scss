@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: rgb(50, 50, 50);
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,8 +16,30 @@
   text-align: center;
   border: #00AFB9 1px solid;
   border-radius: 10px;
+
 }
 
+.nav-item.dropdown {
+    text-align: center;
+}
+
+a {
+    color: #00AFB9;
+    text-decoration: none;
+    background-color: transparent;
+    padding-bottom: 10px;
+}
+.far{
+  text-align: center;
+  color: #00AFB9;
+  font-size: 30px;
+  padding-top: 5px;
+}
+
+.far:hover {
+  text-decoration: none;
+  color: white;
+}
 
 .nav-link:hover {
   text-align: center;
@@ -29,7 +52,12 @@
   color:  #00AFB9;
 }
 
-.navbar-light .navbar-nav .active > .nav-link:hover,{
+.navbar-light .navbar-nav  .active > .nav-link:hover,{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,{
   text-decoration: none;
   color: white;
 }
