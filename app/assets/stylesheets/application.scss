@@ -10,6 +10,7 @@
 @import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 
+
 // Your CSS partials
 @import "components/index";
 @import "components/footer";
@@ -19,3 +20,14 @@
 @import "users/user_profil";
 
 @import "flatpickr/dist/flatpickr.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  background-color: #F8F6EE;
+  font-family: Heebo;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Heebo;
+
+}

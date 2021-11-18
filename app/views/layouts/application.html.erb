@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <%= stylesheet_pack_tag 'application' %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;800&family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Plushbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= stylesheet_pack_tag 'application' %>
   </head>
 
   <body>
   <%= render 'shared/navbar' %>
-    <div class="container">
+
+  <%= render 'shared/flashes' %>
+
+
       <%= yield %>
     </div>
     <section> </section>
     <div class="footer_top"></div>
-
-
-
 <footer>
       <div class="text-center">
         <p class="mb-0 py-2">© 2021 Plushes Bnb All rights reserved.</p>

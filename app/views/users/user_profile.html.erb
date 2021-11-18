@@ -8,39 +8,40 @@
  </div>
 
 
-
-
 <div class="container">
+
   <div class="wrapper2">
 <%= link_to 'Add a plush', new_plush_path, class: "button" %>
   </div>
 
+<div class="wrapper">
+    <% current_user.plushes.each do |owner_plush| %>
+      <div class="card">
+        <% if owner_plush.photo.attached? %>
+          <%= cl_image_tag owner_plush.photo.key, class: "card-img-top"%>
+        <% else %>
+          <p>No photo</p>
+        <% end %>
+        <div class="card-title">
+          <p><%= owner_plush.name %></p>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= owner_plush.description %></p>
+          <p class="card-text"><%= owner_plush.price %> € / jour</p>
+        </div>
+        <p>Bookings for <%= owner_plush.name %> :</p>
+        <% owner_plush.rentals.each do |owner_plush_rental| %>
+          <p><%= owner_plush_rental.date %></p>
+        <% end %>
+        <div class="bouton"><h6>Supprimer cette peluche</h6>
+              <%= link_to "", plush_path(owner_plush),
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              class: "fas fa-trash" %>
+        </div>
+      </div>
 </div>
+</div>
+    <% end %>
 
-<div class="container">
-  <div class="wrapper">
-      <% current_user.plushes.each do |owner_plush| %>
-        <div class="plush-card">
-          <% if owner_plush.photo.attached? %>
-            <%= cl_image_tag owner_plush.photo.key, class: "plush-card-img"%>
-          <% else %>
-            <p>No photo</p>
-          <% end %>
-          <div class="plush-card-text">
-            <p><%= owner_plush.name %></p>
-            <p><%= owner_plush.description %></p>
-            <p><%= owner_plush.price %> € / jour</p>
-          </div>
-          <p>Bookings for <%= owner_plush.name %> :</p>
-          <% owner_plush.rentals.each do |owner_plush_rental| %>
-            <p><%= owner_plush_rental.date %></p>
-          <% end %>
-          <div class="bouton"><h6>Supprimer cette peluche</h6>
-                <%= link_to "", users_user_plushes_path(@plush),
-                method: :delete,
-                data: { confirm: "Are you sure?" },
-                class: "fas fa-trash" %>
-          </div>
-      <% end %>
-  </div>
 </div>
