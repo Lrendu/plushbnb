@@ -56,7 +56,6 @@ class PlushesController < ApplicationController
     redirect_to plushes_path
   end
 
-
   private
 
   def plush_params
