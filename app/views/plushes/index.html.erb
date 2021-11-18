@@ -4,21 +4,6 @@
     <p>Never leave without your plush!</p>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
-<<<<<<< HEAD
-=======
-
-
-<div class="search">
-  <%= form_tag plushes_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control1",
-      placeholder: "Find a plush"
-    %>
-    <%= submit_tag "Search", class: "btn" %>
-  <% end %>
->>>>>>> master
-</div>
 
 <div class="container">
   <%= simple_form_for :query, method: :get,
@@ -56,11 +41,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 <div class="container">
   <div class="cards-grid">
     <% @plushes.each do |plush| %>
