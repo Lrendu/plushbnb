@@ -2,31 +2,41 @@ class PlushesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+
     if params[:query].present?
       sql_query = "name @@ :query OR description @@ :query"
       @plushes = Plush.where(sql_query, query: "%#{params[:query]}%")
     else
       @plushes = Plush.all
     end
-  end
 
-def show
-  @plush = Plush.find(params[:id])
-  authorize @plush
-  @rental = Rental.new
-  @rentals = @plush.rentals
-  @rentals_dates = @rentals.map do |rental|
+    @markers = @plushes.geocoded.map do |plush|
     {
-      from: rental.date,
-      to:   rental.date
+      lat: plush.latitude,
+      lng: plush.longitude,
+      info_window: render_to_string(partial: "info_window", locals: { plush: plush })
     }
+    end
   end
-end
 
-def new
-  @plush = Plush.new
-  authorize @plush
-end
+
+  def show
+    @plush = Plush.find(params[:id])
+    authorize @plush
+    @rental = Rental.new
+    @rentals = @plush.rentals
+    @rentals_dates = @rentals.map do |rental|
+      {
+        from: rental.date,
+        to:   rental.date
+      }
+    end
+  end
+
+  def new
+    @plush = Plush.new
+    authorize @plush
+  end
 
   def create
   @plush = Plush.new(plush_params)
@@ -45,7 +55,6 @@ end
     @plush.destroy
     redirect_to plushes_path
   end
-
 
   private
 
