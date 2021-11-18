@@ -2,7 +2,12 @@ class PlushesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @plushes = Plush.all
+    if params[:query].present?
+      sql_query = "name @@ :query OR description @@ :query"
+      @plushes = Plush.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @plushes = Plush.all
+    end
   end
 
 def show

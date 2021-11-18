@@ -49,14 +49,18 @@ brie = Plush.create!(
   name: 'Brie',
   description: 'La peluche Brie vous accompagne partout pour vous rappeler que le fromage c\'est la vie!',
   price: 15.25,
-  owner: alex
+  owner: alex,
+  color: "White",
+  size: "Small"
 )
 
 ketchup = Plush.create!(
   name: 'Ketchup',
   description: 'La peluche Ketchup vous permet d\'assaisonner vos moments moins up',
   price: 12.32,
-  owner: joseph
+  owner: joseph,
+  color: "Red",
+  size: "Medium"
 )
 puts "#{Plush.count} plushes were created"
 
