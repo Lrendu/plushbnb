@@ -4,15 +4,17 @@ body{
     background-color: #e2e8f0;
 }
 .main-body {
-    padding: 40px;
+    padding: 20px;
 }
 .card-user {
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
   background-color: white;
-  border-radius: 20px;
+  text-align: center;
   padding: 20px;
+  margin:auto;
+  width: 1000px;
 }
 
 .profil {
@@ -20,6 +22,8 @@ width: 1000px;
 margin: auto;
 text-align: center;
 }
+
+img {margin:auto}
 
 .user_info{
   margin: auto;
@@ -58,4 +62,74 @@ text-align: center;
   border: #00AFB9 1px solid;
   border-radius: 10px;
   padding: 10px;
+}
+
+.button:hover {
+  text-align: center;
+  background-color: #00AFB9;
+  border-radius: 10px;
+}
+
+
+.container-profil{
+  width: 400px;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  margin:auto;
+  width: 1000px;
+}
+
+
+.wrapper2 {
+  text-align: right;
+  padding: 20px;
+  padding-right: 0px;
+  margin:auto;
+  width: 1000px;
+
+}
+
+.plush-card {
+  background-color:rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: 5px black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border: black 1px solid;
+  width: 300px;
+}
+
+.plush-card:hover {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+
+.plush-card-img {
+  width: 100%;
+  object-fit: content;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.plush-card-text {
+  padding: 20px
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
 }
