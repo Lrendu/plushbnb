@@ -3,4 +3,6 @@ class Rental < ApplicationRecord
   belongs_to :plush
 
   validates :date, presence: true
+
+  default_scope { order(date: :asc) }
 end
