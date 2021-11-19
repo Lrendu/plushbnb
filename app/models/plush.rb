@@ -1,4 +1,7 @@
 class Plush < ApplicationRecord
+  AUTHORIZED_COLORS = %w[Green White Yelow Red].sort
+  AUTHORIZED_SIZES = %w[Small Medium Large]
+
   include PgSearch::Model
 
   belongs_to :owner, class_name: "User"
