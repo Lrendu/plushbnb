@@ -1,31 +1,61 @@
-<h1>My bookings and my plushes rentals</h1>
+
 
 <div class="container">
-<h2>My plushes rentals :</h2>
-  <div class="grid">
-      <% current_user.plushes.each do |plush| %>
-        <% plush.rentals.each do |rental| %>
-          <p><%= rental.date.strftime('%d/%m/%Y') %> - <%= rental.tenant.name %> - <%= rental.plush.name %></p>
+<div class="barre">
+<h5>My plushes rentals</h5>
+</div>
+  <div class="cards-grid">
+  <% current_user.plushes.each do |plush| %>
+          <% plush.rentals.each do |rental| %>
+        <div class="card" >
           <% if plush.photo.attached? %>
-            <%= cl_image_tag plush.photo.key, class:"img-rentals" %>
+          <p><%= rental.plush.name %></p>
+            <%= cl_image_tag plush.photo.key, class:"card-img-top" %>
           <% else %>
-            <img class="img-rentals" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
+            <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
           <% end %>
-        <% end %>
+          <div class="card-title">
+          <h2><%= rental.plush.name %></h2>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= plush.description %></p>
+            <p class="card-text"> Booked by : <%= rental.tenant.name %></p>
+            <h3 class="card-title">Booking date: <%= rental.date.strftime('%d/%m/%Y') %> </h3>
+          </div>
+        </div>
       <% end %>
-  </div>
-
-  <h2>My rentals :</h2>
-  <div class="grid">
-      <% current_user.rentals.each do |rental| %>
-          <p><%= rental.date.strftime('%d/%m/%Y') %> - <%= rental.plush.owner.name %> - <%= rental.plush.name %></p>
-          <% if rental.plush.photo.attached? %>
-            <%= cl_image_tag rental.plush.photo.key, class:"img-rentals" %>
-          <% else %>
-            <img class="img-rentals" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
-        <% end %>
-      <% end %>
+    <% end %>
   </div>
 </div>
+</div>
 
-<% console %>
+
+
+
+
+<div class="container">
+<div class="barre">
+<h5>My plushes bookings</h5>
+</div>
+  <div class="cards-grid">
+  <% current_user.rentals.each do |rental| %>
+        <div class="card" >
+          <% if rental.plush.photo.attached? %>
+          <p><%= rental.plush.name %></p>
+            <%= cl_image_tag rental.plush.photo.key, class:"card-img-top" %>
+          <% else %>
+            <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
+          <% end %>
+          <div class="card-title">
+          <h2><%= rental.plush.name %></h2>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= rental.plush.description %></p>
+            <p class="card-text"> Booked by : <%= rental.plush.owner.name %></p>
+            <h3 class="card-title">Booking date: <%= rental.date.strftime('%d/%m/%Y') %> </h3>
+          </div>
+        </div>
+      <% end %>
+  </div>
+  </div>
+</div>
