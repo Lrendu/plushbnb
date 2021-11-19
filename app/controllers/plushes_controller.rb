@@ -49,7 +49,7 @@ class PlushesController < ApplicationController
   authorize @plush
   @plush.owner_id = current_user.id
     if @plush.save
-      redirect_to plush_path(@plush)
+      redirect_to users_user_profile_path
     else
       render :new
     end
