@@ -1,5 +1,5 @@
 class Plush < ApplicationRecord
-  AUTHORIZED_COLORS = %w[Green White Yelow Red].sort
+  AUTHORIZED_COLORS = %w[Green White Yellow Red Blue Grey Brown Black].sort
   AUTHORIZED_SIZES = %w[Small Medium Large]
 
   include PgSearch::Model
