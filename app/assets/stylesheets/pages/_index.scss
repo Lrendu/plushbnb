@@ -132,10 +132,12 @@ margin: 0;
   text-align: center;
   font-family: Heebo;
   padding: 30px;
+  background-color: #00AFB9;
+  color: white;
 }
 .text p{
-font-style: italic;
 font-family: Heebo;
+text-align: center;
 }
 .text {
   padding-bottom:20px;
@@ -166,4 +168,17 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 .search{
 text-align: center;
+}
+
+.grid-map{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#map{
+
+  height: 100vh;
+  padding-left: 16px;
+  position: sticky;
+  top: 20px
 }
