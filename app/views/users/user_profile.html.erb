@@ -1,18 +1,17 @@
-
+<div class="grid-map1">
  <div class="card-user">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" >
                     <div class="user_info">
                       <h1><%= current_user.name %></h1>
                       <h6>Email: <%= current_user.email %></h6>
                     </div>
+
+<%= link_to 'Add a plush', new_plush_path, class: "button" %>
  </div>
 
 
 <div class="container">
 
-  <div class="wrapper2">
-<%= link_to 'Add a plush', new_plush_path, class: "button" %>
-  </div>
 
 <div class="wrapper">
     <% current_user.plushes.each do |owner_plush| %>
@@ -27,15 +26,8 @@
         <div class="card-title">
           <p><%= owner_plush.name %></p>
         </div>
-        <div class="card-body">
-          <p class="card-text"><%= owner_plush.description %></p>
-          <p class="card-text"><%= owner_plush.price %> € / jour</p>
-        </div>
-        <p>Bookings for <%= owner_plush.name %> :</p>
-        <% owner_plush.rentals.each do |owner_plush_rental| %>
-          <p><%= owner_plush_rental.date %></p>
-        <% end %>
-        <div class="bouton"><h6>Supprimer cette peluche</h6>
+
+        <div class="bouton">
               <%= link_to "", plush_path(owner_plush),
               method: :delete,
               data: { confirm: "Are you sure?" },
@@ -44,6 +36,7 @@
       </div>
     <% end %>
 
+</div>
 </div>
 
 </div>
