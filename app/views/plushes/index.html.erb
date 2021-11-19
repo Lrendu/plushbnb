@@ -9,19 +9,19 @@
        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://voyage-onirique.com/wp-content/uploads/2020/11/teddy-bears-cute-alone-in-forest-wallpaper.jpg);" alt="First slide">
           <h1>Welcome <strong>to</strong> Plushes Bnb</strong>!</h1>
           <p>Never leave without your plush!</p>
-       </div> %>
+       </div>
       </div>
       <div class="carousel-item ">
         <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/photos/giraffe-soft-toy-and-plush-animal-doll-on-white-background-for-kids-picture-id1036215656?k=20&m=1036215656&s=612x612&w=0&h=uv3ypcvCvS2Zl2HqUc4QVmVQSV5LjCX7RW9DhlbjuAc=);" alt="Second slide">
           <h1>Welcome <strong>to</strong> Plushes Bnb</strong>!</h1>
           <p>Never leave without your plush!</p>
-          </div> %>
+          </div>
         </div>
       <div class="carousel-item ">
         <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://ae01.alicdn.com/kf/HTB1Q.CKKFXXXXXpXXXXq6xXFXXXP/Vente-chaude-25pcs-lot-ours-Paddington-Kawaii-peluche-porte-cl-s-Jouet-Doll-meilleur-cadeau-pour.jpg_Q90.jpg_.webp);" alt="Second slide">
           <h1>Welcome <strong>to</strong> Plushes Bnb</strong>!</h1>
           <p>Never leave without your plush!</p>
-          </div> %>
+          </div>
         </div>
    </div>
    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -52,10 +52,8 @@
 <div class="title-home">
     <h1>Meet our Plushes</h1>
 </div>
-
-<div class="grid-map">
-  <div class="text">
-<div class="container-home">
+<div class="container1">
+<div class="search-home">
   <%= simple_form_for :query, method: :get,
                                   defaults: { wrapper_html: { class: "mr-3" },
                                               required: false },
@@ -83,6 +81,12 @@
     <% else %> <%= @plushes.count %> plushes match your search :
     <% end %>
     </p>
+</div>
+</div>
+
+<div class="grid-map">
+  <div class="text">
+<div class="container-home">
 </div>
 
 <div class="container">
