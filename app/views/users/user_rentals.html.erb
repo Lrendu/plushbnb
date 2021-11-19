@@ -1,12 +1,31 @@
-<h1>My rentals</h1>
+<h1>My bookings and my plushes rentals</h1>
 
 <div class="container">
-  <div class="wrapper">
+<h2>My plushes rentals :</h2>
+  <div class="grid">
       <% current_user.plushes.each do |plush| %>
         <% plush.rentals.each do |rental| %>
-          <p><%= rental.date %> - <%= rental.tenant.name %></p>
+          <p><%= rental.date.strftime('%d/%m/%Y') %> - <%= rental.tenant.name %> - <%= rental.plush.name %></p>
+          <% if plush.photo.attached? %>
+            <%= cl_image_tag plush.photo.key, class:"img-rentals" %>
+          <% else %>
+            <img class="img-rentals" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
+          <% end %>
         <% end %>
       <% end %>
+  </div>
 
+  <h2>My rentals :</h2>
+  <div class="grid">
+      <% current_user.rentals.each do |rental| %>
+          <p><%= rental.date.strftime('%d/%m/%Y') %> - <%= rental.plush.owner.name %> - <%= rental.plush.name %></p>
+          <% if rental.plush.photo.attached? %>
+            <%= cl_image_tag rental.plush.photo.key, class:"img-rentals" %>
+          <% else %>
+            <img class="img-rentals" src="https://cdn-icons-png.flaticon.com/512/620/620744.png">
+        <% end %>
+      <% end %>
   </div>
 </div>
+
+<% console %>
